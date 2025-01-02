@@ -1,0 +1,293 @@
+.navbar-nav .nav-item {
+            margin-right: 20px; 
+        }
+        
+        .navbar-nav .nav-item:last-child {
+            margin-right: 0; 
+        }
+        .custom-spinner {
+            color: #93b012; /* Couleur personnalisée, ici un orange vif */
+            position: relative;
+          }    
+          #logo{
+            width: 5%
+        }
+        .navbar-gradient {
+            background: linear-gradient(to right, #8aa214,  #071d9b); 
+        }        
+
+        body {
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;}
+
+
+        @keyframes moveBg {
+            0% { background-position: 0 0; }
+            100% { background-position: 60px 60px; }
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        .content, .creator-section, .footer {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+        }
+
+        .quaternion-logo {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(145deg, #aed6e0, #eaeced);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+            transform: scale(0);
+            animation: scaleIn 0.8s ease-out forwards;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            left: 30%;
+            margin-top: 1%;
+        }
+        .quaternion-logo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .content {
+            padding: 30px;
+            line-height: 1.8;
+            opacity: 0;
+            animation: slideUp 1s ease-out 0.5s forwards;
+            margin-bottom: 40px;
+        }
+
+        .creator-section {
+            padding: 30px;
+            margin: 30px 0;
+            opacity: 0;
+            animation: slideIn 1s ease-out 1s forwards;
+        }
+
+        .creator-info {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .creator-info h2 {
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .institution-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin: 15px 0;
+            padding: 10px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .institution-row:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .university-logo {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .university-logo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .footer {
+            text-align: right;
+            margin-top: 50px;
+            font-style: italic;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 1.5s forwards;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .highlight {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        .highlight:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        @keyframes scaleIn {
+            from { transform: scale(0) rotate(-180deg); }
+            to { transform: scale(1) rotate(0); }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .geometric-bgr {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(30deg, #ffffff0a 12%, transparent 12.5%, transparent 87%, #ffffff0a 87.5%, #ffffff0a),
+                linear-gradient(150deg, #ffffff0a 12%, transparent 12.5%, transparent 87%, #ffffff0a 87.5%, #ffffff0a),
+                linear-gradient(30deg, #ffffff0a 12%, transparent 12.5%, transparent 87%, #ffffff0a 87.5%, #ffffff0a),
+                linear-gradient(150deg, #ffffff0a 12%, transparent 12.5%, transparent 87%, #ffffff0a 87.5%, #ffffff0a);
+            background-size: 80px 140px;
+            background-position: 0 0, 0 0, 40px 70px, 40px 70px;
+            animation: moveBg 60s linear infinite;
+            opacity: 0.3;
+        }
+
+        .logo-containerr {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 30px;
+            perspective: 1000px;
+        }
+
+        .quaternion-logor {
+            background: linear-gradient(145deg, #05208c, #7d940d);
+            padding: 25px 50px;
+            border-radius: 15px;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: translateZ(0);
+            transition: transform 0.5s ease;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .quaternion-logo:hover {
+            transform: translateZ(50px);
+        }
+
+        .logo-contentr {
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-titler {
+            font-size: 38px;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .logo-subtitler {
+            font-size: 16px;
+            color: rgba(255,255,255,0.9);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 300;
+        }
+
+        .logo-decorationr {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: radial-gradient(circle at center, transparent 30%, rgba(255,255,255,0.1) 70%);
+            transform: rotate(0deg);
+            animation: rotateBg 20s linear infinite;
+        }
+
+        .about-containerr {
+            max-width: 1200px;
+            margin: 0px
+            padding: 40px 20px;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+        }
+        
+
+        @keyframes moveBg {
+            0% { background-position: 0 0, 0 0, 40px 70px, 40px 70px; }
+            100% { background-position: 1000px 0, 1000px 0, 1040px 70px, 1040px 70px; }
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.9);
+            text-transform: uppercase;
+        }
+
+        .accent-text {
+            background: linear-gradient(90deg, #64b3f4, #c2e59c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
